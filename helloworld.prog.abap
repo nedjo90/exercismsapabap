@@ -10,4 +10,3 @@ CLASS zcl_hello_world IMPLEMENTATION.
   ENDMETHOD.
 
 ENDCLASS.
-
