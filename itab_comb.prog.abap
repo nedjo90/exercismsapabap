@@ -58,6 +58,17 @@ CLASS zcl_itab_combination IMPLEMENTATION.
       CONCATENATE wa_a-colc wa_n-col3 INTO wa_c->colz.
       index += 1.
     ENDWHILE. 
+
+* meilleur solution
+*  combined_data = VALUE #( for i = 1 until i > lines( alphas ) or i > lines( nums )
+*    (
+*     colx = |{ alphas[ i ]-cola }{ nums[ i ]-col1 }|
+*     coly = |{ alphas[ i ]-colb }{ nums[ i ]-col2 }|
+*     colz = |{ alphas[ i ]-colc }{ nums[ i ]-col3 }|
+* )
+*   ).
+
+
   ENDMETHOD.
 
 ENDCLASS.
